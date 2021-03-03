@@ -1,9 +1,9 @@
 name: Add Link Labels
 
 on:
+  workflow_dispatch:
   issues:
-    types: [opened]
-    workflow_dispatch:
+    types: [opened]   
 
 jobs:
   add-labels:
