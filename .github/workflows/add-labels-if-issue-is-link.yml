@@ -1,19 +1,13 @@
-name: Add Link Labels
-
+name: "Set Issue URL Label"
 on:
-  workflow_dispatch:
   issues:
-    types: [opened]   
-
+    types: [opened]
 jobs:
-  add-labels:
+  test:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.title, 'https://') == true
     steps:
-      - name: Add labels
-        uses: actions-cool/issues-helper@v2.1.2
+      - uses: Naturalclar/issue-action@v2.0.2
         with:
-          actions: 'add-labels'
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.issue.number }}
-          labels: 'url'
+          title-or-body: "both"
+          parameters: '[ {"keywords": ["https://", "https"], "labels": ["url"]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
