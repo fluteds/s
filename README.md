@@ -1,18 +1,18 @@
 # 🔗 GitHub Pages URL Shortener
 
-This is a minimal URL shortener that can be entirely hosted on GitHub pages. It
-does not need the maintenance of any servers or databases and can be hosted
+This is a minimal URL shortener that can be entirely hosted on GitHub pages.
+It does not need the maintenance of any servers or databases and can be hosted
 entirely on GitHub for free!
+
+> This repo is forked from [nelsontky/gh-pages-url-shortener](https://github.com/nelsontky/gh-pages-url-shortener).
 
 ## 👨‍🏫 Demo
 
-1. [nlsn.cf/1](https://nlsn.cf/1) should link to this repo.
-
 1. To add a new short link, add an issue with the title being the link you want
    to shorten (including the `http(s)://`) to
-   [https://github.com/fluteds/s/issues](https://github.com/fluteds/s/issues).
+   [https://github.com/fluteds/s/issues](github.com/fluteds/s/issues).
 
-1. The newly created short url can be accessed via `nlsn.cf/{issue_number}`
+2. The newly created short url can be accessed via `fluteds.github.io/{issue_number}`
 
 ## ☕️ Features
 
@@ -20,18 +20,15 @@ entirely on GitHub for free!
    "database" in the form of GitHub issues and can be entirely hosted on GitHub
    pages.
 
-1. There is no need for the pound symbol - short URLs look clean like this:
-   `nlsn.cf/1` instead of looking like this: `nlsn.cf/#1`.
+2. There is no need for the pound symbol - short URLs look clean like this:
+   `fluteds.github.io/1` instead of looking like this: `fluteds.github.io/#1`.
 
 ## 💡 How does this work?
 
-_Thanks to @kidGodzilla for the pretty neat explanation
-[here](https://github.com/nelsontky/gh-pages-url-shortener/issues/5#issuecomment-728040879)._
-
 > 1. 404.html handles all requests
-> 1. Small javascript snippet fetches a JSON representation of the GitHub issue
+> 2. Small javascript snippet fetches a JSON representation of the GitHub issue
 >    via the JSON API, and redirects to the issue title, as a URL.
-> 1. Profit?
+> . Profit?
 
 ## 😎 This is so cool! How can I use this with my own domain?!
 
@@ -73,3 +70,4 @@ To feature your fork here, edit this section and open a PR!
   [here](https://github.com/nelsontky/gh-pages-url-shortener/issues/49#issue-745134937).
 - [gh-short-url](https://github.com/mayandev/gh-short-url) - A npm command line
   tool that use github pages to convert short url.
+  
