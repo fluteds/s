@@ -23,7 +23,7 @@ entirely on GitHub for free!
 2. There is no need for the pound symbol - short URLs look clean like this:
    `fluteds.github.io/1` instead of looking like this: `fluteds.github.io/#1`.
 
-## 😎 This is so cool! How can I use this with my own domain?!
+## 😎 How can I use this with my own domain?!
 
 _Disclaimer: This method of creating a URL shortener is hacky and not meant to
 be reliable. Do proceed at your own risk!_
@@ -52,15 +52,4 @@ be reliable. Do proceed at your own risk!_
       1. Remember the trailing `/`!
 1. Push your changes to your forked repo, and your low cost and cool as heck URL
    shortener will be ready for use!
-
-## 🍴 Featured forks
-
-To feature your fork here, edit this section and open a PR!
-
-- [eexit.github.io/s](https://github.com/eexit/s) - Created a bash script that
-  allows for shortening of URLs straight on the command line! Check out his
-  script
-  [here](https://github.com/nelsontky/gh-pages-url-shortener/issues/49#issue-745134937).
-- [gh-short-url](https://github.com/mayandev/gh-short-url) - A npm command line
-  tool that use github pages to convert short url.
   
