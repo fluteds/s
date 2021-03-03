@@ -8,7 +8,7 @@ on:
 jobs:
   add-labels:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.title, 'https://','http://') == true
+    if: contains(github.event.issue.title, 'https://') == true
     steps:
       - name: Add labels
         uses: actions-cool/issues-helper@v2.1.2
