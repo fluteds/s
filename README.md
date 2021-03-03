@@ -6,7 +6,7 @@ This is a minimal URL shortener that can be entirely hosted on GitHub pages.
 It does not need the maintenance of any servers or databases and can be hosted
 entirely on GitHub for free!
 
-## 👨‍🏫 Demo
+## 👨‍🏫 Usage
 
 1. To add a new short link, add an issue with the title being the link you want
    to shorten (including the `http(s)://`) to
