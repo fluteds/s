@@ -1,0 +1,18 @@
+name: Add Link Labels
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-labels:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.title, 'https://','http://') == true
+    steps:
+      - name: Add labels
+        uses: actions-cool/issues-helper@v2.1.2
+        with:
+          actions: 'add-labels'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          labels: 'url'
