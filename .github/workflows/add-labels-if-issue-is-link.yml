@@ -1,14 +1,19 @@
-name: "Set Issue URL Label"
+name: Url Issue Labeller
 on:
   workflow_dispatch:
   issues:
     types: [opened]
+
 jobs:
-  test:
+  daily_standup:
+    name: ""
     runs-on: ubuntu-latest
     steps:
-      - uses: Naturalclar/issue-action@v2.0.2
-        with:
-          title-or-body: "both"
-          parameters: '[ {"keywords": ["https://", "https"], "labels": ["url"]'
-          github-token: "${{ secrets.GITHUB_TOKEN }}"
+    - uses: imjohnbo/issue-bot@v3
+      with:
+        assignees: ""
+        labels: "url"
+        title: ""
+        pinned: false
+        close-previous: false
+        linked-comments: false
