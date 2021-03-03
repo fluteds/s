@@ -8,9 +8,8 @@
        * Configuration goes here
        */
       // Format: https://api.github.com/repos/{owner}/{repo}/issues/
-      var GITHUB_ISSUES_LINK = 
-        "https://api.github.com/repos/fluteds/s/issues/";
-      var PATH_SEGMENTS_TO_SKIP = 1;
+      var GITHUB_ISSUES_LINK = "https://api.github.com/repos/fluteds/sdb/issues/";
+      var PATH_SEGMENTS_TO_SKIP = 0;
 
       /**
        * DO NOT TOUCH ANYTHING BELOW THIS COMMENT UNLESS YOU KNOW WHAT YOU ARE DOING
@@ -49,7 +48,7 @@
 
             // Invalid URLs includes invalid issue numbers, issue titles that are not URLs, and recursive destination URLs
             var isInvalidUrl =
-              message === "Not Found" ||
+              message === "❌ URL Not Found. Check the link and formatting of the issue title and try again." ||
               !title ||
               !isUrl(title) ||
               url.hostname === location.hostname;
