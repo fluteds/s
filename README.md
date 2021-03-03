@@ -1,10 +1,10 @@
 # 🔗 GitHub Pages URL Shortener
 
+> This repo is forked from [nelsontky/gh-pages-url-shortener](https://github.com/nelsontky/gh-pages-url-shortener).
+
 This is a minimal URL shortener that can be entirely hosted on GitHub pages.
 It does not need the maintenance of any servers or databases and can be hosted
 entirely on GitHub for free!
-
-> This repo is forked from [nelsontky/gh-pages-url-shortener](https://github.com/nelsontky/gh-pages-url-shortener).
 
 ## 👨‍🏫 Demo
 
@@ -22,13 +22,6 @@ entirely on GitHub for free!
 
 2. There is no need for the pound symbol - short URLs look clean like this:
    `fluteds.github.io/1` instead of looking like this: `fluteds.github.io/#1`.
-
-## 💡 How does this work?
-
-> 1. 404.html handles all requests
-> 2. Small javascript snippet fetches a JSON representation of the GitHub issue
->    via the JSON API, and redirects to the issue title, as a URL.
-> . Profit?
 
 ## 😎 This is so cool! How can I use this with my own domain?!
 
