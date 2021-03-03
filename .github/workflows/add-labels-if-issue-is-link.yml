@@ -1,5 +1,6 @@
 name: "Set Issue URL Label"
 on:
+  workflow_dispatch:
   issues:
     types: [opened]
 jobs:
