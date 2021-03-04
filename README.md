@@ -10,9 +10,9 @@ entirely on GitHub for free!
 
 1. To add a new short link, add an issue with the title being the link you want
    to shorten (including the `http(s)://`) to
-   [https://github.com/fluteds/s/issues](github.com/fluteds/s/issues).
+   [github.com/fluteds/s/issues](https://github.com/fluteds/s/issues).
 
-2. The newly created short url can be accessed via `fluteds.github.io/{issue_number}`
+2. The newly created short url can be accessed via `fluteds.github.io/s/{issue_number}` or `fluted.xyz/s/{issue_number}`
 
 ## ☕️ Features
 
@@ -21,7 +21,7 @@ entirely on GitHub for free!
    pages.
 
 2. There is no need for the pound symbol - short URLs look clean like this:
-   `fluteds.github.io/1` instead of looking like this: `fluteds.github.io/#1`.
+   `fluteds.xyz/s/1` instead of looking like this: `fluted.xyz/s/#1`.
 
 ## 😎 How can I use this with my own domain?!
 
