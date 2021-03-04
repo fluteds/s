@@ -21,7 +21,7 @@ entirely on GitHub for free!
    pages.
 
 2. There is no need for the pound symbol - short URLs look clean like this:
-   `fluteds.xyz/s/1` instead of looking like this: `fluted.xyz/s/#1`.
+   `fluted.xyz/s/1` instead of looking like this: `fluted.xyz/s/#1`.
 
 ## 😎 How can I use this with my own domain?!
 
