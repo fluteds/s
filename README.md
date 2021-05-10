@@ -5,13 +5,11 @@
 This is a minimal URL shortener that can be entirely hosted on GitHub pages. It does not need the maintenance of any servers or databases and can be hosted
 entirely on GitHub for free! This repo is forked from [nelsontky/gh-pages-url-shortener](https://github.com/nelsontky/gh-pages-url-shortener) and maintained.
 
-**Link to Repo:** [fluted.xyz/s/url](https://fluted.xyz/s/url)
-
 ## Usage
 
 To add a new link:
 
-- Open an issue **with the title being the link you want to shorten** including the `http(s)://` to [/s/issues](https://github.com/fluteds/s/issues).
+- Open an issue **with the title being the link you want to shorten** including the `http(s)://` to [/sdb/issues](https://github.com/fluteds/sdb/issues).
   - Note: Closed issues also work with this URL shortener.
 - The newly created short url can be accessed via the users default GitHub pages domain or a custom domain (if enabled.)
   - Note: There is no need to put the pound symbol as the URLs look like this: `website.xyz/s/1` instead of this: `website.xyz/s/#1`.
