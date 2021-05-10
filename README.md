@@ -5,7 +5,7 @@
 This is a minimal URL shortener that can be entirely hosted on GitHub pages. It does not need the maintenance of any servers or databases and can be hosted
 entirely on GitHub for free! This repo is forked from [nelsontky/gh-pages-url-shortener](https://github.com/nelsontky/gh-pages-url-shortener) and maintained.
 
-**Link to Repo:** [fluted.xyz/s/1](https://fluted.xyz/s/1)
+**Link to Repo:** [fluted.xyz/s/2](https://fluted.xyz/s/2)
 
 ## Usage
 
