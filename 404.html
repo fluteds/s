@@ -26,7 +26,7 @@
     function redirect() {
       var location = window.location;
       var keyword = location.pathname.split("/")[
-        PATH_SEGMENTS_TO_SKIP + 1
+        PATH_SEGMENTS_TO_SKIP + 0
       ];
 
       var isQuery = location.href.substr(-1) == "?";
@@ -112,7 +112,7 @@
 </head>
 
 <body>
-  Links to <span id="link"></span>
+  <span id="link"></span>
 </body>
 
 </html>
