@@ -12,7 +12,7 @@ To add a new link:
 - Open an issue **with the title being the link you want to shorten** including the `http(s)://` to [/sdb/issues](https://github.com/fluteds/sdb/issues).
   - Note: Closed issues also work with this URL shortener.
 - The newly created short url can be accessed via the users default GitHub pages domain or a custom domain (if enabled.)
-  - Note: There is no need to put the pound symbol as the URLs look like this: `website.xyz/s/1` instead of this: `website.xyz/s/#1`.
+  - Note: There is no need to put the hash symbol as the URLs look like this: `website.xyz/s/1` instead of this: `website.xyz/s/#1`.
 
 ## Features
 
