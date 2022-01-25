@@ -1,77 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Redirecting...</title>
-    <script>
-      /**
-       * Configuration goes here
-       */
-      // Format: https://api.github.com/repos/{owner}/{repo}/issues/
-      var GITHUB_ISSUES_LINK = "https://api.github.com/repos/fluteds/sdb/issues/";
-      var PATH_SEGMENTS_TO_SKIP = 0;
 
-      /**
-       * DO NOT TOUCH ANYTHING BELOW THIS COMMENT UNLESS YOU KNOW WHAT YOU ARE DOING
-       */
-      function isUrl(url) {
-        // Regex from https://stackoverflow.com/a/3809435, with a modification to allow for TLDs of up to 24 characters
-        return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,24}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)+$/.test(
-          url
-        );
-      }
+<head>
+  <meta charset="utf-8" />
+  <title>Redirecting...</title>
+  <script>
+    /**
+     * Configuration goes here
+     */
+    // Format: https://api.github.com/repos/{owner}/{repo}/issues/
+    var GITHUB_ISSUES_LINK = "https://api.github.com/repos/fluteds/sdb/issues/";
+    var PATH_SEGMENTS_TO_SKIP = 0;
 
-      function redirect() {
-        var location = window.location;
-        var issueNumber = location.pathname.split("/")[
-          PATH_SEGMENTS_TO_SKIP + 1
-        ];
-        var homepage =
-          location.protocol +
-          "//" +
-          location.hostname +
-          (location.port ? ":" + location.port : "") +
-          "/" +
-          location.pathname.split("/")[PATH_SEGMENTS_TO_SKIP];
+    /**
+     * DO NOT TOUCH ANYTHING BELOW THIS COMMENT UNLESS YOU KNOW WHAT YOU ARE DOING
+     */
+    function isUrl(url) {
+      // Regex from https://stackoverflow.com/a/3809435, with a modification to allow for TLDs of up to 24 characters
+      return /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,24}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)+$/.test(
+        url
+      );
+    }
 
-        var xhr = new XMLHttpRequest();
+    function redirect() {
+      var location = window.location;
+      var issueNumber = location.pathname.split("/")[
+        PATH_SEGMENTS_TO_SKIP + 1
+      ];
+      var homepage =
+        location.protocol +
+        "//" +
+        location.hostname +
+        (location.port ? ":" + location.port : "") +
+        "/" +
+        location.pathname.split("/")[PATH_SEGMENTS_TO_SKIP];
 
-        xhr.onload = function () {
-          try {
-            var payload = JSON.parse(xhr.response);
-            var message = payload.message;
-            var title = payload.title;
+      var xhr = new XMLHttpRequest();
 
-            // Workaround IE 11 lack of support for new URL()
-            var url = document.createElement("a");
-            url.setAttribute("href", title);
+      xhr.onload = function () {
+        try {
+          var payload = JSON.parse(xhr.response);
+          var message = payload.message;
+          var title = payload.title;
 
-            // Invalid URLs includes invalid issue numbers, issue titles that are not URLs, and recursive destination URLs
-            var isInvalidUrl =
-              message === "❌ URL Not Found. Check the link and formatting of the issue title and try again." ||
-              !title ||
-              !isUrl(title) ||
-              url.hostname === location.hostname;
+          // Workaround IE 11 lack of support for new URL()
+          var url = document.createElement("a");
+          url.setAttribute("href", title);
 
-            if (isInvalidUrl) {
-              location.replace(homepage);
-            } else {
-              location.replace(title);
-            }
-          } catch (e) {
+          // Invalid URLs includes invalid issue numbers, issue titles that are not URLs, and recursive destination URLs
+          var isInvalidUrl =
+            message === "❌ URL Not Found. Check the link and formatting of the issue title and try again." ||
+            !title ||
+            !isUrl(title) ||
+            url.hostname === location.hostname;
+
+          if (isInvalidUrl) {
             location.replace(homepage);
+          } else {
+            location.replace(title);
           }
-        };
-
-        xhr.onerror = function () {
+        } catch (e) {
           location.replace(homepage);
-        };
-        xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber);
-        xhr.send();
-      }
+        }
+      };
 
-      redirect();
-    </script>
-  </head>
-  <body></body>
+      xhr.onerror = function () {
+        location.replace(homepage);
+      };
+      xhr.open("GET", GITHUB_ISSUES_LINK + issueNumber);
+      xhr.send();
+    }
+
+    redirect();
+  </script>
+</head>
+
+<body></body>
+
 </html>
