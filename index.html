@@ -4,7 +4,9 @@
 
 <head>
   <title>You shouldn't be here</title>
-  <link rel="shortcut icon" type="image/jpg" href="https://win98icons.alexmeub.com/icons/png/windows_update_large-2.png"/></head>
+  <link rel="shortcut icon" type="image/jpg"
+    href="https://win98icons.alexmeub.com/icons/png/windows_update_large-2.png" />
+</head>
 
 <body>
   <main class="bsod container">
@@ -16,7 +18,7 @@
         * If the error persists, please open an issue.</p>
       <p>This is a URL shortnener hosted by issues opened on GitHub.</p>
 
-      <h1 id="-url-shortener">🔗 URL Shortener</h1>
+      <h1 class="neg title"><span class="bg">URL Shortener</span></h1>
       <p><strong>Hosted by Github Pages</strong></p>
       <p>This is a minimal URL shortener that can be entirely hosted on GitHub pages. It does not need the maintenance
         of any servers or databases and can be hosted
@@ -26,62 +28,17 @@
       <p><strong>Link to Repo:</strong> <a href="https://dont-ghost.me/1">dont-ghost.me/1</a></p>
       <h2 id="usage">Usage</h2>
       <p>To add a new link: </p>
-      <ul>
-        <li>Open an issue <strong>with the title being the link you want to shorten</strong> including the
-          <code>http(s)://</code> to <a href="https://github.com/fluteds/sdb/issues">/sdb/issues</a>. <ul>
-            <li>Note: Closed issues also work with this URL shortener.</li>
-          </ul>
-        </li>
-        <li>The newly created short url can be accessed via the users default GitHub pages domain or a custom domain (if
-          enabled.)<ul>
-            <li>Note: There is no need to put the pound symbol as the URLs look like this: <code>website.xyz/1/</code>
-              instead of this: <code>website.xyz/s/#1</code>.</li>
-          </ul>
-        </li>
+
+      * Open an issue <strong>with the title being the link you want to shorten</strong> including the
+      <code>http(s)://</code> to <a href="https://github.com/fluteds/sdb/issues">/sdb/issues</a>.<br>
+      * The newly created short url can be accessed via the users default GitHub pages domain or a custom domain (if
+      enabled.)<br>
+      * The short url will be automatically generated and the issue will be closed.<br>
       </ul>
+
       <h2 id="features">Features</h2>
       <p>Unlike many URL shorteners, this one uses a &quot;database&quot; in the form of GitHub issues and can be
         entirely hosted via GitHub pages. </p>
-      <h2 id="how-can-i-use-this-with-my-own-domain-">How can I use this with my own domain?</h2>
-      <p>Disclaimer: This method of creating a URL shortener is hacky and not meant to
-        be reliable. It may break or be patched at anytime. Proceed at your own risk!</p>
-      <ol>
-        <li>Fork the repo.</li>
-        <li>
-          <p>Set up GitHub pages for your <strong>forked</strong> repo.</p>
-          <ol>
-            <li>In your <strong>forked</strong> repo, <strong>click the Settings tab</strong> and scroll down to the
-              GitHub Page section.</li>
-            <li>Then select the <strong>main branch</strong> source and click on the <strong>Save</strong> button.</li>
-          </ol>
-          <p><img src="https://i.imgur.com/kjinFX9.png" alt="How to Create a GitHub Page for Your Repo"></p>
-        </li>
-      </ol>
-      <h3 id="if-you-are-using-your-own-domain">If you are using your own domain</h3>
-      <ol>
-        <li><a
-            href="https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">Set
-            your domain up for GitHub pages.</a></li>
-        <li>Change the URL in <code>CNAME</code> file to your domain.</li>
-        <li>Push your changes to your database/forked repo.</li>
-      </ol>
-      <h3 id="if-you-are-using-github-s-default-domain">If you are using GitHub&#39;s default domain</h3>
-      <p>It looks something like <code>https://&lt;username&gt;.github.io/&lt;repo-name&gt;/</code></p>
-      <ol>
-        <li>Delete the <code>CNAME</code> file.</li>
-        <li>Change <code>var PATH_SEGMENTS_TO_SKIP = 0;</code> at the top of <code>404.html</code> to <code>var
-            PATH_SEGMENTS_TO_SKIP = 1;</code>. This is because GitHub domains have an additional path segment (the
-          reponame) after the host name.</li>
-        <li>(Optional) Create a new repo or use your forked repo as a database.</li>
-        <li>Update <code>var GITHUB_ISSUES_LINK = &quot;&lt;your-github-issues-link&gt;&quot;;</code> at the top of
-          <code>404.html</code> accordingly afterwards.</li>
-        <li>Format for <code>GITHUB_ISSUES_LINK</code>: <code>https://api.github.com/repos/{owner}/{repo}/issues/</code>
-          Remember to put the trailing <code>/</code>!</li>
-        <li>Push your changes to your database/forked repo, and your low cost and cool as heck URL shortener will be
-          ready for use!</li>
-      </ol>
-
-
       <nav class="nav">
         <a href="https://dont-ban.me" class="link">index</a>&nbsp;|&nbsp;<a href="https://github.com/fluteds/s"
           class="link">source</a>

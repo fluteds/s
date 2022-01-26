@@ -10,7 +10,7 @@ entirely on GitHub for free! This repo is forked from [nelsontky/gh-pages-url-sh
 ## Usage
 
 To add a new link: 
-- Open an issue **with the title being the link you want to shorten** including the `http(s)://` to [/s/issues](https://github.com/fluteds/s/issues). 
+- Open an issue **with the title being the link you want to shorten** including the `http(s)://` to [/sdb/issues](https://github.com/fluteds/sdb/issues). 
    - Note: Closed issues also work with this URL shortener.
 - The newly created short url can be accessed via the users default GitHub pages domain or a custom domain (if enabled.)
    - Note: There is no need to put the pound symbol as the URLs look like this: `website.xyz/1/` instead of this: `website.xyz/s/#1`.
