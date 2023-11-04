@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="style.css">
 <html>
   <head>
+    <link rel="shortcut icon" type="image/jpg"
+    href="https://win98icons.alexmeub.com/icons/png/windows_update_large-2.png" />
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
@@ -14,7 +16,7 @@
         "https://api.github.com/repos/fluteds/sdb/issues/";
       var PATH_SEGMENTS_TO_SKIP = 0;
       // Github username (will only redirect for issues by this user)
-      var ME = "";
+      var ME = "fluteds";
 
       /**
        * DO NOT TOUCH ANYTHING BELOW THIS COMMENT UNLESS YOU KNOW WHAT YOU ARE DOING
@@ -54,11 +56,11 @@
           if (issue.user.login == ME) {
             var url = issue.title;
           } else {
-            var url = "Failed authentication (GitHub Issue not created by owner of repository)"
+            var url = "Failed authentication (GitHub Issue not created by owner of repository.) Not redirecting."
           }
         } else {
           // no issue matched
-          var url = "Critical Err. 404 URL not found";
+          var url = "404 URL not found";
         }
 
         // update page

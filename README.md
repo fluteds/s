@@ -1,36 +1,37 @@
-# 🔗 URL Shortener 
-
-**Hosted by Github Pages**
+# 🔗 URL Shortener
 
 This is a minimal URL shortener that can be entirely hosted on GitHub pages. It does not need the maintenance of any servers or databases and can be hosted
-entirely on GitHub for free! This repo is forked from [nelsontky/gh-pages-url-shortener](https://github.com/nelsontky/gh-pages-url-shortener) and maintained.
-
-**Link to Repo:** [dont-ghost.me/1/](https://dont-ghost.me/1/)
+entirely on GitHub for free! This repo is forked from [nelsontky/gh-pages-url-shortener.](https://github.com/nelsontky/gh-pages-url-shortener)
 
 ## Usage
 
-To add a new link: 
-- Open an issue **with the title being the link you want to shorten** including the `http(s)://` to [/sdb/issues](https://github.com/fluteds/sdb/issues). 
-   - Note: Closed issues also work with this URL shortener.
-- The newly created short url can be accessed via the users default GitHub pages domain or a custom domain (if enabled.)
-   - Note: There is no need to put the pound symbol as the URLs look like this: `website.xyz/1/` instead of this: `website.xyz/s/#1`.
+To add a new link:
+
+- Open an issue with the title being the link you want to shorten including the `http(s)://` to [/sdb/issues.](https://github.com/fluteds/sdb/issues)
+  
+Closed issues also work with this URL shortener. The newly created short url can be accessed via the users default GitHub pages domain or a custom domain (if enabled.)
+
+## URL Formatting
+
+- URLs are formatted as the following: `website.xyz/1`
+- URLs that are formatted as `website.xyz/s/#1` with the hash symbol are not valid and will 404.
+- Adding a `?` at the end of a search does not redirect and shows the unshortened URL eg. `website.xyz/1?`
+- Searching `website.xyz/{TEXT}` rather than `website.xyz/{NUMBER}`, will attempt to match and redirect to `website.xyz/{TEXT}` if an issue has the queried text as its description.
 
 ## Features
 
-Unlike many URL shorteners, this one uses a "database" in the form of GitHub issues and can be entirely hosted via GitHub pages. 
+Unlike many URL shorteners, this one uses a "database" in the form of GitHub issues and can be entirely hosted via GitHub pages. The downside to it is that shortened links cannot be deleted without deleting the entire repo.
 
+## Setting up
 
-## How can I use this with my own domain?
+This method of creating a URL shortener is hacky and not meant to be reliable. It may break or be patched at anytime. Proceed at your own risk.
 
-Disclaimer: This method of creating a URL shortener is hacky and not meant to
-be reliable. It may break or be patched at anytime. Proceed at your own risk!
+- Fork the repo.
+- Set up GitHub pages for your forked repo.
+- Click the Settings tab and scroll down to the GitHub Page section.
+- Select the main branch source and click on the Save button.
 
-1. Fork the repo.
-2. Set up GitHub pages for your **forked** repo.
-   1. In your **forked** repo, **click the Settings tab** and scroll down to the GitHub Page section.
-   2. Then select the **main branch** source and click on the **Save** button.
-
-  ![How to Create a GitHub Page for Your Repo](https://i.imgur.com/kjinFX9.png)
+![How to Create a GitHub Page for Your Repo](https://i.imgur.com/kjinFX9.png)
 
 ### If you are using your own domain
 
@@ -46,5 +47,5 @@ It looks something like `https://<username>.github.io/<repo-name>/`
 2. Change `var PATH_SEGMENTS_TO_SKIP = 0;` at the top of `404.html` to `var PATH_SEGMENTS_TO_SKIP = 1;`. This is because GitHub domains have an additional path segment (the reponame) after the host name.
 3. (Optional) Create a new repo or use your forked repo as a database.
 4. Update `var GITHUB_ISSUES_LINK = "<your-github-issues-link>";` at the top of `404.html` accordingly afterwards.
-5. Format for `GITHUB_ISSUES_LINK`: `https://api.github.com/repos/{owner}/{repo}/issues/` Remember to put the trailing `/`!
-6. Push your changes to your database/forked repo, and your low cost and cool as heck URL shortener will be ready for use!
+5. Format for `GITHUB_ISSUES_LINK`: `https://api.github.com/repos/{owner}/{repo}/issues/` Remember to include the trailing `/`.
+6. Push your changes to your database/forked repo.
